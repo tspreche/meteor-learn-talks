@@ -1,0 +1,53 @@
+<head>
+  <title>talks</title>
+</head>
+
+<body>
+	<div class="container">
+  		{{> header}}
+  		{{> talksList}}
+  		{{> newTalk}}
+  	</div>
+</body>
+
+<template name="header">
+	<h2>Learn list</h2>
+	<h3>learn it now</h3>
+	<hr />
+	{{loginButtons}}
+	<hr />
+</template>
+
+<template name="talksList">
+	<ul>
+		{{#each talks}}
+		<li>
+			<b>
+				{{title}}
+			</b> by {{speaker}}
+				({{votes}} votes)
+				{{#if currentUser}}
+				<input type="button" class="upvote"
+						value="Upvote" />
+				<input type="button" class="downvote"
+						value="Downvote" />
+				<input type="button" class="delete"
+						value="Delete" />
+				{{/if}}
+
+		</li>
+		{{/each}}
+	</ul>
+
+</template>
+
+<template name="newTalk">
+	{{#if currentUser}}
+	<form class="form-inline newTalkForm">
+		Title: <input type="input" class="title">
+		Speaker: <input type="input" class="speaker">
+		<input type="submit" value="Add" />
+	</form>
+	{{/if}}
+</template>
+
