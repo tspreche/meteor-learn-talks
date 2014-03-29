@@ -1,4 +1,7 @@
 i18n.map('en', {
+  title: 'Title',
+  speaker: 'Speaker',
+  add: 'Add',
   delete: 'Delete',
   upvote: 'Upvote',
   downvote: 'Downvote',
@@ -6,6 +9,9 @@ i18n.map('en', {
 });
 
 i18n.map('de', {
+  title: 'Titel',
+  speaker: 'Vortragender',
+  add: 'Hinzufügen',
   delete: 'Löschen',
   upvote: '+1',
   downvote: '-1',

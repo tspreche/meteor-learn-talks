@@ -44,9 +44,9 @@
 <template name="newTalk">
 	{{#if currentUser}}
 	<form class="form-inline newTalkForm">
-		Title: <input type="input" class="title">
-		Speaker: <input type="input" class="speaker">
-		<input type="submit" value="Add" />
+		{{i18n "title"}}: <input type="input" class="title">
+		{{i18n "speaker"}}: <input type="input" class="speaker">
+		<input type="submit" value="{{i18n "add"}}" />
 	</form>
 	{{/if}}
 </template>
