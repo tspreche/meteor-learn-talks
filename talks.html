@@ -14,7 +14,7 @@
 	<h2>Learn list</h2>
 	<h3>learn it now</h3>
 	<hr />
-	{{loginButtons}}
+	{{>loginButtons}}
 	<hr />
 </template>
 
@@ -24,15 +24,15 @@
 		<li>
 			<b>
 				{{title}}
-			</b> by {{speaker}}
+			</b> {{i18n "by"}} {{speaker}}
 				({{votes}} votes)
 				{{#if currentUser}}
 				<input type="button" class="upvote"
-						value="Upvote" />
+						value="{{i18n "upvote"}}" />
 				<input type="button" class="downvote"
-						value="Downvote" />
+						value="{{i18n "downvote"}}" />
 				<input type="button" class="delete"
-						value="Delete" />
+						value="{{i18n "delete"}}" />
 				{{/if}}
 
 		</li>
